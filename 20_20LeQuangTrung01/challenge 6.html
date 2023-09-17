@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 6</title>
+</head>
+<body>
+    <script>
+        
+        var calcTip = (bill) => {
+            if (bill >= 50 && bill <= 300) {
+                return bill * 0.15; // 15% tip
+            } else {
+                return bill * 0.2; // 20% tip
+            }
+        };
+
+        // kiểm hàm có giá trị hóa đơn là 100
+        var testBill = 100;
+        var tip = calcTip(testBill);
+        console.log(`The tip for a bill of $${testBill} is $${tip}`);
+
+        // dữ liệu mẫu
+        var bills = [125, 555, 44];
+
+        // 
+        var tips = bills.map(calcTip);
+        console.log("Tips for the bills:", tips);
+
+        // Tổng giá trị
+        var totals = bills.map(bill => bill + calcTip(bill));
+        console.log("Total values:", totals);
+
+    </script>
+</body>
+</html>

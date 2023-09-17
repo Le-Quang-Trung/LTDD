@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Challenge 1, 2</title>
+</head>
+
+<body>
+
+    <script>
+        // Dữ liệu cho Mark và John
+        var weightMark1 = 78; // kg
+        var heightMark1 = 1.69; // mét
+
+        var weightJohn1 = 92; // kg
+        var heightJohn1 = 1.95; // mét
+
+        var bmiMark1 = weightMark1 / (heightMark1 ** 2);
+        var bmiJohn1 = weightJohn1 / (heightJohn1 ** 2);
+
+        var markHigherBMI1 = bmiMark1 > bmiJohn1;
+
+        if (markHigherBMI1) {
+            console.log(` Mark's BMI (${bmiMark1.toFixed(1)}) is higher than John's (${bmiJohn1.toFixed(1)})!`);
+        } else {
+            console.log(` John's BMI (${bmiJohn1.toFixed(1)}) is higher than Mark's (${bmiMark1.toFixed(1)})!`)
+        }
+
+        var weightMark2 = 95; // kg
+        var heightMark2 = 1.88; // mét
+
+        var weightJohn2 = 85; // kg
+        var heightJohn2 = 1.76; // mét
+
+        var bmiMark2 = weightMark2 / (heightMark2 ** 2);
+        var bmiJohn2 = weightJohn2 / (heightJohn2 ** 2);
+
+        var markHigherBMI2 = bmiMark2 > bmiJohn2;
+
+        if (markHigherBMI2) {
+            console.log(` Mark's BMI (${bmiMark2.toFixed(1)}) is higher than John's (${bmiJohn2.toFixed(1)})!`);
+        } else {
+            console.log(` John's BMI (${bmiJohn2.toFixed(1)}) is higher than Mark's (${bmiMark2.toFixed(1)})!`)
+        }
+    </script>
+</body>
+
+</html>

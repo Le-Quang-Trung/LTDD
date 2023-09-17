@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 9</title>
+</head>
+<body>
+    <script>
+        function printForecast(arr) {
+            let forecastString = '';
+            for (let i = 0; i < arr.length; i++) {
+                forecastString += `... ${arr[i]}°C in ${i + 1} day(s) `;
+            }
+            console.log(forecastString);
+        }
+
+        // data
+        var data1 = [17, 21, 23];
+        var data2 = [12, 5, -5, 0, 4];
+
+        // 
+        console.log("Data 1:");
+        printForecast(data1);
+
+        console.log("\nData 2:");
+        printForecast(data2);
+
+    </script>
+</body>
+</html>

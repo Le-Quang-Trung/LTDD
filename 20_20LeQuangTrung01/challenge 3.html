@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 3</title>
+</head>
+
+<body>
+
+    <script>
+        // Dữ liệu điểm số của Dolphins và Koalas
+        var dolphinsScores1 = [96, 108, 89];
+        var koalasScores1 = [88, 91, 110];
+
+        var dolphinsScoresBonus1 = [97, 112, 101];
+        var koalasScoresBonus1 = [109, 95, 123];
+
+        var dolphinsScoresBonus2 = [97, 112, 101];
+        var koalasScoresBonus2 = [109, 95, 106];
+
+        // Tính điểm trung bình
+        var calculateAverage = (scores) => scores.reduce((total, score) => total + score, 0) / scores.length;
+
+        // kiểm tra điểm tối thiểu của 1 đội là 100 ?
+        var hasMinimumScore = (scores) => scores.every(score => score >= 100);
+
+        // Điểm trung bình
+        var dolphinsAverage1 = calculateAverage(dolphinsScores1);
+        var koalasAverage1 = calculateAverage(koalasScores1);
+
+        var dolphinsAverageBonus1 = calculateAverage(dolphinsScoresBonus1);
+        var koalasAverageBonus1 = calculateAverage(koalasScoresBonus1);
+
+        var dolphinsAverageBonus2 = calculateAverage(dolphinsScoresBonus2);
+        var koalasAverageBonus2 = calculateAverage(koalasScoresBonus2);
+
+        // kết quả
+        var winner1 = dolphinsAverage1 > koalasAverage1 ? 'Dolphins' : 'Koalas';
+        var winnerBonus1 = dolphinsAverageBonus1 > koalasAverageBonus1 && hasMinimumScore(dolphinsScoresBonus1) ? 'Dolphins' : 'Koalas';
+        var winnerBonus2 = dolphinsAverageBonus2 > koalasAverageBonus2 && hasMinimumScore(dolphinsScoresBonus2) ? 'Dolphins' : dolphinsAverageBonus2 < koalasAverageBonus2 && hasMinimumScore(koalasScoresBonus2) ? 'Koalas' : 'No one';
+
+        console.log("Data 1 Results:");
+        console.log(`Dolphins Average: ${dolphinsAverage1}`);
+        console.log(`Koalas Average: ${koalasAverage1}`);
+        console.log(`Winner: ${winner1}`);
+
+        console.log("\nData Bonus 1 Results:");
+        console.log(`Dolphins Average: ${dolphinsAverageBonus1}`);
+        console.log(`Koalas Average: ${koalasAverageBonus1}`);
+        console.log(`Winner: ${winnerBonus1}`);
+
+        console.log("\nData Bonus 2 Results:");
+        console.log(`Dolphins Average: ${dolphinsAverageBonus2}`);
+        console.log(`Koalas Average: ${koalasAverageBonus2}`);
+        console.log(`Winner: ${winnerBonus2}`);
+    </script>
+</body>
+
+</html>
